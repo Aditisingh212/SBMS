@@ -1,0 +1,345 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+    color: #2e3a4e;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #1557ac;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+h2 {
+    color: #37474f;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #eceff1;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+    background-color: #f7f9fc;
+    padding: 1.2rem;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+input[type="text"], 
+input[type="date"], 
+input[type="number"], 
+input[type="email"], 
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid #b0bec5;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease;
+    background-color: #ffffff;
+    color: #2e3a4e;
+}
+
+input[type="text"]:focus, 
+input[type="date"]:focus, 
+input[type="number"]:focus, 
+input[type="email"]:focus, 
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #1557ac;
+    outline: none;
+    background-color: #e3f2fd;
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #eceff1;
+    padding: 0.7rem;
+    text-align: left;
+    background-color: #f1f8fe;
+}
+
+th {
+    background-color: #1557ac;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+}
+
+td {
+    background-color: #ffffff;
+}
+
+.btn-primary, 
+.btn-secondary {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #1557ac;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #1557ac;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #43a047;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #388e3c;
+    transform: translateY(-2px);
+}
+
+.delete-item {
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+.delete-item:hover {
+    background-color: #d32f2f;
+}
+
+.totals-section {
+    background-color: #f7f9fc;
+    padding: 1.2rem;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.totals {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.totals span {
+    display: block;
+    font-weight: 600;
+}
+
+.totals span:first-child {
+    margin-top: 0.5rem;
+}
+
+.totals span:last-child {
+    font-size: 1.1rem;
+    color: #1557ac;
+}
+
+#item-table {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
+
+#item-table th, 
+#item-table td {
+    padding: 0.7rem;
+    border: 1px solid #eceff1;
+    text-align: center;
+}
+
+#item-table th {
+    background-color: #1557ac;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#item-table td {
+    background-color: #f1f8fe;
+}
+
+#item-table input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background-color: #ffffff;
+}
+
+#item-table button {
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+#item-table button:hover {
+    background-color: #d32f2f;
+}
+
+/* Existing styles... */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#pdf-preview {
+    border: none;
+}
+
+#download-invoice {
+    display: block;
+    margin: 1rem auto;
+}
+
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* Add this to your existing styles.css */
+
+@media (max-width: 768px) {
+    #item-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    #item-table th, 
+    #item-table td {
+        display: inline-block;
+        min-width: 150px; /* Adjust based on your needs */
+    }
+
+    #item-table thead {
+        display: none;
+    }
+
+    #item-table tr {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    #item-table td {
+        display: block;
+        text-align: right;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-bottom: 1px solid #eceff1;
+    }
+
+    #item-table td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    #item-table td:last-child {
+        border-bottom: none;
+    }
+}

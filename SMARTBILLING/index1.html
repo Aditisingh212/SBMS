@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminDashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+
+    <script>
+        // Check if the user is logged in
+        if (!localStorage.getItem('loggedInUser')) {
+            // If not logged in, redirect to the login page
+            window.location.href = '#';
+        }
+    </script>
+
+
+    <div class="container">
+        <!-- Aside -->
+         <!-- <button id="menu_bar"></button> -->
+        <aside>
+            <!-- top start -->
+            <div class="top">
+
+                <!-- logo -->
+                <div class="logo">
+                    <h2><span class="danger">SmartBilly</span></h2>
+                </div>
+                
+                <!-- close -->
+                <div class="close" id= "close_btn">
+                    <span  class="material-symbols-outlined">
+                        close
+                        </span>
+                </div>
+            </div>
+            <!-- end top -->
+
+
+
+
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-symbols-outlined"> grid_view </span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="#" >
+                    <span class="material-symbols-outlined"> person_outline </span>
+                    <h3>Customers</h3>
+                </a>
+
+                <a href="analytics.html">
+                    <span class="material-symbols-outlined"> insights</span>
+                    <h3>Analytics</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined"> mail_outline </span>
+                    <h3>Messages</h3>
+                    <span class="msg_count">14</span>
+                </a>
+
+                <a href="invoice.html">
+                    <span class="material-symbols-outlined">receipt_long </span>
+                    <h3>Invoice</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">report_gmailerrorred</span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">add</span>
+                    <h3>Add Product</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
+
+            </div>
+        </aside>
+
+
+
+        <!-- Main -->
+        <main>
+            <h1>Dashboard</h1>
+
+            <div class="date">
+                Date: <input type="date" >
+            </div>
+
+            <div class="insights">
+
+                <!-- selling -->
+                <div class="sales">
+                    <span class="material-symbols-outlined">trending_up</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Sales</h3>
+                            <h1>$354,999</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="30" cy="40" cx="40"></circle>
+                            </svg>
+                             <div class="number">75%</div>
+                        </div>
+                    </div>
+                    <small>Last 24hr</small>
+                </div>
+
+                
+                <!-- expenses -->
+                <div class="expenses">
+                    <span class="material-symbols-outlined">local_mall</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Expenses</h3>
+                            <h1>$142,499</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="30" cy="40" cx="40"></circle>
+                            </svg>
+                             <div class="number">40%</div>
+                        </div>
+                    </div>
+                    <small>Last 24hr</small>
+                </div>
+
+
+                <!-- income -->
+                <div class="income">
+                    <span class="material-symbols-outlined">stacked_line_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Income</h3>
+                            <h1>$124,999</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="30" cy="40" cx="40"></circle>
+                            </svg>
+                             <div class="number">100%</div>
+                        </div>
+                    </div>
+                    <small>Last 24hr</small>
+                </div>
+            </div>
+            <!-- insights end -->
+
+
+            <!-- start recent order -->
+             <div class="recent_order">
+                <h1>Recent Orders</h1>
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Product Name</th>
+                        <th>Product Number</th>
+                        <th>Payments</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Mini USB</td>
+                            <td>456</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                             
+                        </tr>
+
+                        <tr>
+                            <td>Mini USB</td>
+                            <td>456</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                             
+                        </tr>
+
+                        <tr>
+                            <td>Mini USB</td>
+                            <td>456</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                             
+                        </tr>
+
+                        <tr>
+                            <td>Mini USB</td>
+                            <td>456</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                             
+                        </tr>
+
+                    </tbody>
+                </table>
+             </div>
+
+            <!-- end recent order -->
+
+        </main>
+
+        <!-- right -->
+         <div class="right">
+            <div class="top">
+                <button id="menu_bar">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+
+                <div class="theme-toggler">
+                    <span class="material-symbols-outlined active">light_mode</span>
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p><b>User</b></p>
+                        <p>Admin</p>
+                        <small class="text-muted"></small>
+                    </div>
+
+                    <div class="profile_photo">
+                        <img src="user.png" alt="User">
+                    </div>
+                </div>
+            </div>
+           <!-- end top -->
+            
+            <!-- recent updates -->
+            <div class="recent_updates">
+                <h2>Recent Updates</h2>
+
+            <div class="updates">
+                <div class="update">
+                    <div class="profile_photo">
+                        <img src="user1.png" alt="">
+                    </div>
+
+                    <div class="message">
+                        <p><b>User</b> received his order</p>
+                    </div>
+                </div>
+
+                <div class="update">
+                    <div class="profile_photo">
+                        <img src="user1.png" alt="">
+                    </div>
+
+                    <div class="message">
+                        <p><b>User</b> received his order</p>
+                    </div>
+                </div>
+
+                <div class="update">
+                    <div class="profile_photo">
+                        <img src="user1.png" alt="">
+                    </div>
+
+                    <div class="message">
+                        <p><b>User</b> received his order</p>
+                    </div>
+                </div>
+            </div>
+           
+            </div>
+            <!-- end recent updates -->
+
+            <!-- start sale analytic -->
+            <div class="sales_analytics">
+                <h2>Sales Analytics</h2>
+
+                <div class="item online">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                    </div>
+
+                    <div class="right_text">
+                        <div class="info">
+                            <h3>Online Orders</h3>
+                            <small class="text-muted">Last seen 2hr ago</small>
+                        </div>
+                        <h5 class="danger">-17%</h5>
+                        <h3>3849</h3>
+                    </div>
+                </div>
+
+
+                <div class="item online">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                    </div>
+
+                    <div class="right_text">
+                        <div class="info">
+                            <h3>Online Orders</h3>
+                            <small class="text-muted">Last seen 2hr ago</small>
+                        </div>
+                        <h5 class="danger">-17%</h5>
+                        <h3>3849</h3>
+                    </div>
+                </div>
+
+
+                <div class="item online">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                    </div>
+
+                    <div class="right_text">
+                        <div class="info">
+                            <h3>Online Orders</h3>
+                            <small class="text-muted">Last seen 2hr ago</small>
+                        </div>
+                        <h5 class="danger">-17%</h5>
+                        <h3>3849</h3>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end sale analytic -->
+            <div class="item add_products">
+                <div>
+                    <span class="material-symbols-outlined">add</span>
+                </div>
+            </div>
+
+         </div>
+
+         <!--  -->
+        
+
+
+
+    </div>
+
+
+
+    <script src ="index.js"></script>
+</body>
+</html>
